@@ -1,0 +1,109 @@
+ <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Data Detail User Close
+        <small>SoloNET</small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="invoice">
+      <!-- title row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="page-header">
+            <i class="fa fa-globe"></i> SoloNET.
+            <small class="pull-right"><b><?php echo date('d')." ".$bulan_indonesia[date('m')]." ".date('Y');?></b></small>
+          </h2>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- info row -->
+      <div class="row invoice-info">
+        <div class="col-sm-4 invoice-col">
+          Marketing
+          <address>
+            <strong><?php echo $_SESSION['nama_user']; ?></strong><br>
+          </address>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- Table row -->
+      <div class="row">
+        <div class="col-xs-12 table-responsive">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th width="10">No</th>
+              <th>Paketan</th>
+              <th>Harga</th>
+              <th>Jumlah</th>
+              <th>Bonus</th>
+              <th>Subtotal</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            $subsidi = $select->select_data_subsidi_bulan_ini($login_id_marketing);
+            $no=1;
+            $total=0;
+            foreach ($select->select_data_paket_internet() as $data) {
+              $id_paket = $data['id_paket'];
+              $jumlah = $select->select_data_user_seusai_paket_sesuai_marketing($login_id_marketing, $id_paket);
+              if($jumlah>=1){
+                $subtotal = $jumlah * $data['bonus_marketing'];
+            ?>
+            <tr>
+              <td align="center"><?php echo $no;?></td>
+              <td align="center"><?php echo $data['nama_paket'];?></td>
+              <td align="center"><?php echo number_format($data['harga'],0,',','.');?></td>
+              <td align="center"><?php echo $jumlah;?></td>
+              <td align="right"><?php echo number_format($data['bonus_marketing'],0,',','.');?></td>
+              <td align="right"><?php echo number_format($subtotal,0,',','.');?></td>
+            </tr>
+            <?php
+                $no++;
+                $total=$total+$subtotal;
+              }
+            }
+            ?>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+        <!-- accepted payments column -->
+        <div class="col-xs-6">
+          
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-6">
+          <div class="table-responsive">
+            <table class="table">
+              <tr>
+                <th style="width:50%">Total :</th>
+                <td align="right"><?php echo number_format($total,0,',','.');?></td>
+              </tr>
+              <tr>
+                <th style="width:50%">Subsidi :</th>
+                <td align="right"><a href="#detail_subsidi<?php echo $login_id_marketing; ?>" role="button"  data-target = "#detail_subsidi<?php echo $login_id_marketing; ?>" data-toggle="modal"><font color="black"><?php echo number_format($subsidi,0,',','.');?></font></a></td>
+              </tr>
+              <tr>
+                <th style="width:50%">GAJI BERSIH :</th>
+                <td align="right"><b><?php echo number_format($subsidi+$total,0,',','.');?></b></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    <div class="clearfix"></div>
+
+  <?php include "modal_detail_subsidi.php";?>

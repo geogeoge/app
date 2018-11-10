@@ -1,0 +1,29 @@
+[19-Oct-2018 10:52:41 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '$via' (T_VARIABLE) in /home/appsolonetnet/public_html/apps/app_billing/function.php on line 173
+[19-Oct-2018 10:53:15 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'select' (T_STRING) in /home/appsolonetnet/public_html/apps/app_billing/function.php on line 178
+[19-Oct-2018 10:53:32 Asia/Jakarta] PHP Warning:  include(modal_alert_saldo.php): failed to open stream: No such file or directory in /home/appsolonetnet/public_html/apps/app_billing/page_log_transaksi_billing.php on line 415
+[19-Oct-2018 10:53:32 Asia/Jakarta] PHP Warning:  include(): Failed opening 'modal_alert_saldo.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/appsolonetnet/public_html/apps/app_billing/page_log_transaksi_billing.php on line 415
+[19-Oct-2018 10:53:36 Asia/Jakarta] PHP Warning:  include(modal_alert_saldo.php): failed to open stream: No such file or directory in /home/appsolonetnet/public_html/apps/app_billing/page_log_transaksi_billing.php on line 415
+[19-Oct-2018 10:53:36 Asia/Jakarta] PHP Warning:  include(): Failed opening 'modal_alert_saldo.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/appsolonetnet/public_html/apps/app_billing/page_log_transaksi_billing.php on line 415
+[19-Oct-2018 10:54:07 Asia/Jakarta] PHP Warning:  include(modal_alert_saldo.php): failed to open stream: No such file or directory in /home/appsolonetnet/public_html/apps/app_billing/page_log_transaksi_billing.php on line 415
+[19-Oct-2018 10:54:07 Asia/Jakarta] PHP Warning:  include(): Failed opening 'modal_alert_saldo.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/appsolonetnet/public_html/apps/app_billing/page_log_transaksi_billing.php on line 415
+[22-Oct-2018 14:38:05 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/appsolonetnet/public_html/koneksi/koneksi.php on line 15
+[22-Oct-2018 14:38:23 Asia/Jakarta] PHP Warning:  Invalid argument supplied for foreach() in /home/appsolonetnet/public_html/apps/app_billing/page_access_edt_user_baru.php on line 3
+[22-Oct-2018 14:39:03 Asia/Jakarta] PHP Warning:  Invalid argument supplied for foreach() in /home/appsolonetnet/public_html/apps/app_billing/page_access_edt_user_baru.php on line 3
+[22-Oct-2018 15:10:34 Asia/Jakarta] PHP Fatal error:  Call to undefined method update::update_register() in /home/appsolonetnet/public_html/apps/app_billing/index.php on line 208
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/index.php on line 7
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/function.php on line 6
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/index.php on line 21
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/function.php on line 1141
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/function.php on line 1066
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  Division by zero in /home/appsolonetnet/public_html/apps/app_billing/page_dashboard.php on line 26
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/function.php on line 1033
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  Division by zero in /home/appsolonetnet/public_html/apps/app_billing/page_dashboard.php on line 76
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/function.php on line 1087
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/function.php on line 1042
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/function.php on line 1087
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/function.php on line 1141
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/function.php on line 1141
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/function.php on line 1123
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/function.php on line 1132
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/modal_access_alert_tagihan_khusus.php on line 10
+[05-Nov-2018 00:48:40 Asia/Jakarta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/appsolonetnet/public_html/apps/app_billing/index.php on line 403
