@@ -1,5 +1,6 @@
 <?php
 include "koneksi/koneksi.php";
+//komentar
 $maintenance = "0";
 if($maintenance=="1"){
 	include "maintenance.php";
