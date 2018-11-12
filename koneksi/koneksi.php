@@ -5,7 +5,7 @@ $user = 'appsolonetnet';     // ini berlaku di xampp
 $pass = 'r4s4ht4k0kt4k0k';         // ini berlaku di xampp
 $db = 'appsolon_app';
 
-// Ini koneksi untuk maintenance.
+// Ini koneksi untuk maintenance.asdfasfasdfads
 $host = 'localhost'; 
 $user = 'root';     // ini berlaku di xampp
 $pass = 'root';         // ini berlaku di xampp
