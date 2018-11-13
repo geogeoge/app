@@ -19,7 +19,7 @@
 				</div>
 				<div class = "modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
-					<button name="edit_transaksi_rutin" class="btn btn-info">UPDATE</button>
+					<button name="edit_transaksi_rutin" class="btn btn-warning">UPDATE</button>
 				</div>
 				</form> 
 			</div>                                

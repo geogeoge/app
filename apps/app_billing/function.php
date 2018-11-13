@@ -2275,6 +2275,16 @@ class insert {
 
 }
 
+
+class delete {
+	function hapus_transaksi_rutin() {
+    	include "../../koneksi/koneksi.php";
+
+    	echo $id_bantu_log_pembayaran_rutin = $_POST['id_bantu_log_pembayaran_rutin'];
+    	mysqli_query($koneksi,"DELETE FROM `billing_bantu_log_pembayaran_rutin` WHERE `id_bantu_log_pembayaran_rutin`='$id_bantu_log_pembayaran_rutin'");
+	}
+}
+
 class login {
 	function proses_login() {
 		$username=$_POST['username'];

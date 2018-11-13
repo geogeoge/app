@@ -15,6 +15,7 @@ $crud = new crud;
 $select = new select;
 $insert = new insert;
 $update = new update;
+$delete = new delete;
 
 //----------------------------------------Proses Update Tagihan Bulanan------------------------------------------\\
  $tanggal_hari_ini=date('Y-m-d',strtotime($crud->tanggal_hari_ini()));
@@ -230,7 +231,11 @@ if(isset($_POST['insert_transaksi_rutin'])) {
 }
 
 if(isset($_POST['edit_transaksi_rutin'])) {
-  $insert->edit_transaksi_rutin();
+  $update->edit_transaksi_rutin();
+}
+
+if(isset($_POST['hapus_transaksi_rutin'])) {
+  $delete->hapus_transaksi_rutin();
 }
 
 

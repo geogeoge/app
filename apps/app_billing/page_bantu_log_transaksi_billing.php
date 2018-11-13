@@ -93,7 +93,7 @@ include "modal_kas_keluar_rutin.php";
                     </tr>
                     <?php
                       include "modal_edit_transaksi_rutin.php";
-                      include "modal_konfirmasi_hapus.php";
+                      include "modal_hapus_transaksi_rutin.php";
                       $no++;
                     }
                     //ini tampil jika masih blm ada transaksi
