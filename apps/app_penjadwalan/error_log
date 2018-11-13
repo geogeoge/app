@@ -1,0 +1,2 @@
+[04-Mar-2018 22:13:05 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ',' in /home/appsolonetnet/public_html/apps/app_teknisi/index.php on line 303
+[16-Apr-2018 14:16:20 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/appsolonetnet/public_html/koneksi/koneksi.php on line 9

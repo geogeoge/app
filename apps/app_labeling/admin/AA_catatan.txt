@@ -1,0 +1,12 @@
+edit tampil :
+-scroll
+-modal edit :
+	>> target
+	>> value
+	>> button
+	>> script proses
+-moda hapus :
+	>> target
+	>> value (info,id)
+	>> button
+	>> script proses

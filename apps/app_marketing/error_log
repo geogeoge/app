@@ -1,0 +1,3 @@
+[30-Jan-2018 15:54:46 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ']' in /home/appsolonetnet/public_html/apps/app_marketing/export_data_user_close.php on line 36
+[30-Jan-2018 15:55:44 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'm' (T_STRING), expecting ']' in /home/appsolonetnet/public_html/apps/app_marketing/export_data_user_close.php on line 36
+[30-Jan-2018 16:06:27 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ';' in /home/appsolonetnet/public_html/apps/app_marketing/export_data_user_close.php on line 51

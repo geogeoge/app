@@ -1,0 +1,34 @@
+[04-Mar-2018 22:13:05 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ',' in /home/appsolonetnet/public_html/apps/app_teknisi/index.php on line 303
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(../../koneksi/koneksi.php): failed to open stream: No such file or directory in /home/appsolonetnet/public_html/apps/app_teknisi/index.php on line 3
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(): Failed opening '../../koneksi/koneksi.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/appsolonetnet/public_html/apps/app_teknisi/index.php on line 3
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(../../koneksi/koneksi.php): failed to open stream: No such file or directory in /home/appsolonetnet/public_html/apps/app_teknisi/navbar.php on line 2
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(): Failed opening '../../koneksi/koneksi.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/appsolonetnet/public_html/apps/app_teknisi/navbar.php on line 2
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/appsolonetnet/public_html/apps/app_teknisi/navbar.php on line 4
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/appsolonetnet/public_html/apps/app_teknisi/navbar.php on line 5
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(../../koneksi/koneksi.php): failed to open stream: No such file or directory in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 328
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(): Failed opening '../../koneksi/koneksi.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 328
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 335
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 336
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  Invalid argument supplied for foreach() in /home/appsolonetnet/public_html/apps/app_teknisi/page_jadwal_maintenance.php on line 53
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(../../koneksi/koneksi.php): failed to open stream: No such file or directory in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 243
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(): Failed opening '../../koneksi/koneksi.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 243
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 245
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 246
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  Invalid argument supplied for foreach() in /home/appsolonetnet/public_html/apps/app_teknisi/index.php on line 305
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(../../koneksi/koneksi.php): failed to open stream: No such file or directory in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 252
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(): Failed opening '../../koneksi/koneksi.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 252
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 254
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 255
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  Invalid argument supplied for foreach() in /home/appsolonetnet/public_html/apps/app_teknisi/index.php on line 321
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(../../koneksi/koneksi.php): failed to open stream: No such file or directory in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 261
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(): Failed opening '../../koneksi/koneksi.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 261
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 263
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 264
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  Invalid argument supplied for foreach() in /home/appsolonetnet/public_html/apps/app_teknisi/index.php on line 337
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(../../koneksi/koneksi.php): failed to open stream: No such file or directory in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 270
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  include(): Failed opening '../../koneksi/koneksi.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 270
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 272
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/appsolonetnet/public_html/apps/app_teknisi/function.php on line 273
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  Invalid argument supplied for foreach() in /home/appsolonetnet/public_html/apps/app_teknisi/index.php on line 353
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/appsolonetnet/public_html/apps/app_teknisi/index.php on line 443
+[09-Nov-2018 14:58:32 Asia/Jakarta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/appsolonetnet/public_html/apps/app_teknisi/index.php on line 444
