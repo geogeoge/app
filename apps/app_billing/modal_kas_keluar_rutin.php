@@ -14,7 +14,7 @@
 				</div>
 				<div class = "modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
-					<button name="insert_daily_keluar" class="btn btn-info">SIMPAN</button>
+					<button name="insert_transaksi_rutin" class="btn btn-info">SIMPAN</button>
 				</div>
 				</form> 
 			</div>                                

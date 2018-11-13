@@ -2230,6 +2230,15 @@ class update {
 
 	    mysqli_query($koneksi,"UPDATE `sale_register` SET `ip_publik`='$ip_publik', `nik`='$nik', `nama_user`='$nama_user', `nama_instansi`='$nama_instansi', `jenis_kelamin`='$jenis_kelamin', `tempat_lahir`='$tempat_lahir', `tanggal_lahir`='$tanggal_lahir', `telp`='$telp', `email`='$email', `alamat`='$alamat', `koordinat`='$koordinat', `id_paket`='$id_paket', `id_bts`='$id_bts', `id_radio`='$id_radio', `jumlah_radio`='$jumlah_radio', `harga_radio`='$harga_radio', `status_radio`='$status_radio', `id_antena`='$id_antena', `jumlah_antena`='$jumlah_antena', `harga_antena`='$harga_antena', `status_antena`='$status_antena', `id_wifi`='$id_wifi', `jumlah_wifi`='$jumlah_wifi', `harga_wifi`='$harga_wifi', `status_wifi`='$status_wifi', `id_tower`='$id_tower', `jumlah_tower`='$jumlah_tower', `harga_tower`='$harga_tower', `status_tower`='$status_tower', `id_kabel`='$id_kabel', `panjang_kabel`='$panjang_kabel', `harga_kabel`='$harga_kabel', `status_kabel`='$status_kabel', biaya_registrasi='$biaya_registrasi',`tambahan_1`='$tambahan_1',`jumlah_tambahan_1`='$jumlah_tambahan_1',`status_tambahan_1`='$status_tambahan_1',`harga_tambahan_1`='$harga_tambahan_1',`tambahan_2`='$tambahan_2',`jumlah_tambahan_2`='$jumlah_tambahan_2',`status_tambahan_2`='$status_tambahan_2',`harga_tambahan_2`='$harga_tambahan_2' WHERE id_register='$id_register'");
 	}
+
+	function edit_transaksi_rutin() {
+	    include "../../koneksi/koneksi.php";
+
+		$keterangan = $_POST['keterangan'];
+		$id_bantu_log_pembayaran_rutin = $_POST['id_bantu_log_pembayaran_rutin'];
+
+		mysqli_query($koneksi,"UPDATE `billing_bantu_log_pembayaran_rutin` SET `keterangan`='$keterangan' WHERE `id_bantu_log_pembayaran_rutin`='$id_bantu_log_pembayaran_rutin'");
+	}
 }
 
 class insert {
@@ -2250,7 +2259,7 @@ class insert {
 			$nominal = implode("", $pecah_nominal);
 
 
-			mysqli_query($koneksi,"INSERT INTO `data_temp`(`tanggal`, `keterangan`, `no_log_pembayaran`, `nominal`, `id_account`, `in_out`, `status`, `ekstra`) VALUES ('$post_tanggal', '$keterangan', '0', '$nominal', '1', 'i', 'belum', 'access')");
+			mysqli_query($koneksi,"INSERT INTO `data_temp`(`tanggal`, `keterangan`, `no_log_pembayaran`, `nominal`, `id_account`, `in_out`, `status`, `ekstra`) VALUES ('$post_tanggal', '$keterangan', '', '$nominal', '1', 'o', 'belum', 'access')");
 		}
     }
   }

@@ -229,6 +229,10 @@ if(isset($_POST['insert_transaksi_rutin'])) {
   $insert->insert_transaksi_rutin();
 }
 
+if(isset($_POST['edit_transaksi_rutin'])) {
+  $insert->edit_transaksi_rutin();
+}
+
 
 $bulan_indonesia = array(
   '01' => 'JANUARI',

@@ -87,13 +87,13 @@ include "modal_kas_keluar_rutin.php";
                       <td align="left" hidden="hidden"><input type="text" id="inputku" class="form-control" name=keterangan[] value="<?php echo $data['keterangan']; ?>"></td>
                       <td align="center"><input type="text" id="inputku" class="form-control" name=nominal[] onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" value="<?php echo number_format($nominal_tunggakan,0,',','.');?>"></td>
                       <td align="center">
-                        <a href="#modal_batal_transaksi<?php echo $data['id_temp']; ?>" role="button"  data-target = "#modal_batal_transaksi<?php echo $data['id_temp'];?>" data-toggle="modal" class="btn btn-xs btn-warning">&nbsp;<i class="fa fa-edit"></i>&nbsp;</a>
-                        <a href="#modal_batal_transaksi<?php echo $data['id_temp']; ?>" role="button"  data-target = "#modal_batal_transaksi<?php echo $data['id_temp'];?>" data-toggle="modal" class="btn btn-xs btn-danger">&nbsp;<i class="fa fa-close"></i>&nbsp;</a>
+                        <a href="#modal_edit<?php echo $data['id_bantu_log_pembayaran_rutin']; ?>" role="button"  data-target = "#modal_edit<?php echo $data['id_bantu_log_pembayaran_rutin'];?>" data-toggle="modal" class="btn btn-xs btn-warning">&nbsp;<i class="fa fa-edit"></i>&nbsp;</a>
+                        <a href="#modal_hapus<?php echo $data['id_bantu_log_pembayaran_rutin']; ?>" role="button"  data-target = "#modal_hapus<?php echo $data['id_bantu_log_pembayaran_rutin'];?>" data-toggle="modal" class="btn btn-xs btn-danger">&nbsp;<i class="fa fa-close"></i>&nbsp;</a>
                       </td>
                     </tr>
                     <?php
-                      include "modal_hapus_data_temp.php";
-                      include "modal_edit_log_pembayaran.php";
+                      include "modal_edit_transaksi_rutin.php";
+                      include "modal_konfirmasi_hapus.php";
                       $no++;
                     }
                     //ini tampil jika masih blm ada transaksi
