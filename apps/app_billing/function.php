@@ -206,8 +206,10 @@ class crud {
 			$pembayaran_internet = $total_tunggakan - $tunggakan_ip_publik;
 
 			//Pendapatan Internet Pada Piutang
-			$katerangan_post = "Pembayaran Internet ( ".$nama_user." )".$tambahan_keterangan;
-			$this->input_data_temp_posting($waktu_pembayaran, $katerangan_post, $no_log_pembayaran, $pembayaran_internet, $id_account, 'i', 'belum', 'access', '3');
+			if($pembayaran_internet>=1){
+				$katerangan_post = "Pembayaran Internet ( ".$nama_user." )".$tambahan_keterangan;
+				$this->input_data_temp_posting($waktu_pembayaran, $katerangan_post, $no_log_pembayaran, $pembayaran_internet, $id_account, 'i', 'belum', 'access', '3');
+			}
 
 			//Pembayaran IP Public
 			if($tunggakan_ip_publik>=1){
@@ -228,7 +230,7 @@ class crud {
 				$proses_update=mysqli_query($koneksi,"update sale_register set billing_saldo='$update_billing_saldo', billing_bulan_terbayar=billing_bulan_terbayar+'$update_bulan_terbayar', billing_total_bayar=billing_total_bayar+'$bayar', billing_total_restitusi=billing_total_restitusi+'$restitusi' where id_register='$id_register'");
 
 				//Bagian Akuntansi
-				$tunggakan_ip_publik = 100000 * $update_bulan_terbayar;
+				$tunggakan_ip_publik = $harga_ip_publik * $update_bulan_terbayar;
 				$pembayaran_internet = $total_dana - $tunggakan_ip_publik;
 
 				//Pendapatan Internet Pada Piutang
