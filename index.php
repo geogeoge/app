@@ -56,4 +56,10 @@ if($maintenance=="1"){
 		header('location:login');
 	}
 }
+<<<<<<< HEAD
 ?>
+=======
+
+//ini rauting
+?>
+>>>>>>> 74641c4a76e1627f242a899dae4363b6ac77cfd4
