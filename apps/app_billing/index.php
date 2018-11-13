@@ -13,6 +13,7 @@ if($jumlah_user_baru>=3){
 
 $crud = new crud;
 $select = new select;
+$insert = new insert;
 $update = new update;
 
 //----------------------------------------Proses Update Tagihan Bulanan------------------------------------------\\
@@ -218,6 +219,14 @@ if(isset($_POST['insert_daily_masuk'])) {
 
 if(isset($_POST['edit_log_pembyaran'])) {
   $update->edit_log_pembyaran();
+}
+
+if(isset($_POST['posting_transaksi_rutin'])) {
+  $insert->posting_transaksi_rutin();
+}
+
+if(isset($_POST['insert_transaksi_rutin'])) {
+  $insert->insert_transaksi_rutin();
 }
 
 
