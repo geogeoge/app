@@ -10,7 +10,7 @@ $koneksi_lama = new mysqli($host_lama,$user_lama,$pass_lama,$db_lama) or die ('K
 $host_baru = 'localhost'; 
 $user_baru = 'root';     // ini berlaku di xampp
 $pass_baru = 'root';         // ini berlaku di xampp
-$db_baru = 'sampah_solonet_app_lama';
+$db_baru = 'appsolon_app';
  
 // melakukan koneksi ke database
 $koneksi_baru = new mysqli($host_baru,$user_baru,$pass_baru,$db_baru) or die ('Koneksi Baru Bermasalah');

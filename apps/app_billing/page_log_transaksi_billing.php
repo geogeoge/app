@@ -40,7 +40,7 @@ if(isset($_GET['limit'])){
       SoloNet
     </small>
     <div class="tombol_tambah">
-        <a href="?page=page_bantu_log_transaksi_billing" class="btn btn-edit"><i class="fa fa-search"></i>&nbsp;&nbsp;Transaksi Rutin</a>
+        <a href="?page=page_bantu_log_transaksi_billing" class="btn btn-primary"><i class="fa fa-edit"></i>&nbsp;&nbsp;Transaksi Rutin</a>
         <a href="?page=page_detail_tagihan_pak_eko" class="btn btn-primary"><i class="fa fa-search"></i>&nbsp;&nbsp;Pak Eko</a>
       <a href="#modal_kas_keluar" role="button"  data-target = "#modal_kas_keluar" data-toggle="modal" class="btn btn-primary"><i class="fa fa-upload"></i>&nbsp;&nbsp;Kas Keluar</a>
       <a href="#modal_kas_masuk" role="button"  data-target = "#modal_kas_masuk" data-toggle="modal" class="btn btn-primary"><i class="fa fa-download"></i>&nbsp;&nbsp;Kas Masuk</a>

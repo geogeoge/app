@@ -346,7 +346,15 @@ class crud {
 		}
 		if($tampil_register['status_tower']=="BELI") {
 			$nominal_po = $nominal_po + $tampil_register['harga_tower'];
-			$harga_tower = $nominal_po + $tampil_register['harga_tower'];
+			$harga_tower = $harga_tower + $tampil_register['harga_tower'];
+		}
+		if($tampil_register['status_tambahan_1']=="BELI") {
+			$nominal_po = $nominal_po + $tampil_register['harga_tambahan_1'];
+			$hutang_hardware = $hutang_hardware + $tampil_register['harga_tambahan_1'];
+		}
+		if($tampil_register['status_tambahan_2']=="BELI") {
+			$nominal_po = $nominal_po + $tampil_register['harga_tambahan_2'];
+			$hutang_hardware = $hutang_hardware + $tampil_register['harga_tambahan_2'];
 		}
 
 		$ppn = 0;
