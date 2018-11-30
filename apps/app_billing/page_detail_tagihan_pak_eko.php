@@ -86,7 +86,7 @@ if(isset($_GET['tanggal_akhir'])){
                     <tr>
                       <td align="center">3</td>
                       <td align="left">Tagihan User Baru</td>
-                      <td align="center"><a href="?data_yang_dicari=Pembayaran+User+Baru+&tanggal_awal=<?php echo $tanggal_awal;?>&tanggal_akhir=<?php echo $tanggal_akhir;?>&page=page_tampil_detail_tagihan_pak_eko" style="color: black;"><?php echo $select->select_data_temp_tagihan_pak_eko($tanggal_awal, $tanggal_akhir, 'Registrasi User Baru '); ?></a></td>
+                      <td align="center"><a href="?data_yang_dicari=Registrasi+User+Baru+&tanggal_awal=<?php echo $tanggal_awal;?>&tanggal_akhir=<?php echo $tanggal_akhir;?>&page=page_tampil_detail_tagihan_pak_eko" style="color: black;"><?php echo $select->select_data_temp_tagihan_pak_eko($tanggal_awal, $tanggal_akhir, 'Registrasi User Baru '); ?></a></td>
                     </tr>
                     <tr>
                       <td align="center">4</td>
