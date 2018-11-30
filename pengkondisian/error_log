@@ -1,0 +1,3 @@
+[28-Nov-2018 10:32:28 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/appsolonetnet/public_html/pengkondisian/koneksi.php on line 7
+[28-Nov-2018 10:32:28 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/appsolonetnet/public_html/pengkondisian/koneksi.php on line 16
+[28-Nov-2018 10:32:34 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/appsolonetnet/public_html/pengkondisian/proses.php on line 8

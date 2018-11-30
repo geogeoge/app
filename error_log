@@ -1,1 +1,2 @@
 [13-Nov-2018 12:34:18 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/appsolonetnet/public_html/index.php on line 59
+[16-Nov-2018 14:48:01 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/appsolonetnet/public_html/koneksi/koneksi.php on line 15
