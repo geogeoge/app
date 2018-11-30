@@ -418,11 +418,11 @@ class crud {
             mysqli_query($koneksi, "insert into billing_backup_log_user (id_register, id_paket, bulan) values ('$id_register', '$id_paket', '$bulan')");
 			
             //Pembayaran Registrasi
-        	$keterangan_post = "Registrasi User Baru ( ".$nama_user." )";
+        	$keterangan_post = "Registrasi User Baru ( ".$nama_user." )".$tambahan_keterangan;
 		    $this->input_data_temp_posting($waktu_pembayaran, $keterangan_post, $no_log_pembayaran, $biaya_registrasi, $via, 'i', 'belum', 'access', '3');
 
 			//Pembayaran Pro Rata
-        	$keterangan_post = "Pembayaran Prorata ( ".$nama_user." )".$tambahan_keterangan;
+        	$keterangan_post = "Pembayaran Prorata ( ".$nama_user." )";
 		    $this->input_data_temp_posting($waktu_pembayaran, $keterangan_post, $no_log_pembayaran, $monthly_fee, $via, 'i', 'belum', 'access', '3');
 
 		    //Pembayaran Pipa
