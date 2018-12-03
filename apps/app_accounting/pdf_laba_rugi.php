@@ -38,7 +38,7 @@ $pdf->SetFont('Times','B',14);
 $pdf->Cell(10,15,' ',0, 1, 'C');
 
 $pdf->SetFont('Arial','B',14);
-$pdf->Cell(190,5,'CV. CONNECTIS JATI INFORMATIKA',0, 0, 'C');
+$pdf->Cell(190,5,'PT. SOLO JALA BUANA',0, 0, 'C');
 $pdf->Cell(0,6,'',0, 1, 'R');
 
 $pdf->SetFont('Times','B',12);
