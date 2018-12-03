@@ -111,7 +111,7 @@ $data_account=mysqli_fetch_array($query_account);
                         }
                         ?>
                         <td align="center">
-                            <a href="#edit_jurnal_umum<?php echo $id_modal;?>" role="button"  data-target = "#edit_jurnal_umum<?php echo $id_modal;?>" data-toggle="modal" class="btn btn-xs btn-warning">&nbsp;<i class="fa fa-edit"></i>&nbsp;</a>
+                            <a href="#edit_jurnal_umum<?php echo $data['id_transaksi'];?>" role="button"  data-target = "#edit_jurnal_umum<?php echo $data['id_transaksi'];?>" data-toggle="modal" class="btn btn-xs btn-warning">&nbsp;<i class="fa fa-edit"></i>&nbsp;</a>
                         </td>
                       </tr>
                       <?php

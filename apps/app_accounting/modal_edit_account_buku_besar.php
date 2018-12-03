@@ -1,4 +1,4 @@
-<div class="modal fade" id="edit_jurnal_umum<?php echo $id_modal;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="edit_jurnal_umum<?php echo $data['id_transaksi'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -6,7 +6,7 @@
 			</div>
 			<div class="modal-body">
 				<form  method="POST" enctype="multipart/form-data">
-				<div class="form-group">
+				<div class="form-group" hidden="hidden">
 					<label class="col-sx-2 control-label" for="inputEmail">Tanggal Awal</label>
 					<div class="col-sx-10">
 						<input type="text" name="id_transaksi" id="inputEmail" class = "form-control" value="<?php echo $data['id_transaksi']; ?>">
