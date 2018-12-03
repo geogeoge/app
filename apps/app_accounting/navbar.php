@@ -49,6 +49,7 @@ $jumlah_data_out=mysqli_num_rows($query_out);
       <ul class="treeview-menu">
         <li><a href="?page=page_laba_rugi_access"><i class="fa fa-circle-o"></i>Access</a></li>
         <li><a href="?page=page_laba_rugi_hardware"><i class="fa fa-circle-o"></i>Hardware</a></li>
+        <li><a href="?page=page_laba_rugi_overhead"><i class="fa fa-circle-o"></i>Overhead</a></li>
         <li><a href="?page=page_laba_rugi"><i class="fa fa-circle-o"></i>Total</a></li>
       </ul>
     </li>

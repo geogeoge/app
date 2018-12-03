@@ -132,6 +132,26 @@ class select {
     return $total_nominal;
   }
 
+  function select_jumlah_nominal_per_account_debit_overhead($id_account, $tanggal_awal, $tanggal_akhir) {    
+    include "../../koneksi/koneksi.php";
+
+    $total_nominal = 0;
+    $query=mysqli_query($koneksi,"SELECT * FROM `data_transaksi` WHERE `id_account`='$id_account' AND tanggal BETWEEN '$tanggal_awal 00:00:00' AND '$tanggal_akhir 23:59:59' AND `ekstra`=''");
+    while($tampil=mysqli_fetch_array($query)){
+      $nominal=$tampil['nominal'];
+      $DK=$tampil['DK'];
+
+      if($DK=='D'){
+        $nominal_debit = $nominal_debit + $nominal;
+      } else {
+        $nominal_kredit = $nominal_kredit + $nominal;
+      }
+    }
+
+    $total_nominal = $nominal_debit - $nominal_kredit;
+    return $total_nominal;
+  }
+
   function select_jumlah_nominal_per_account_kredit($id_account, $tanggal_awal, $tanggal_akhir) {    
     include "../../koneksi/koneksi.php";
 
@@ -177,6 +197,26 @@ class select {
 
     $total_nominal = 0;
     $query=mysqli_query($koneksi,"SELECT * FROM `data_transaksi` WHERE `id_account`='$id_account' AND tanggal BETWEEN '$tanggal_awal 00:00:00' AND '$tanggal_akhir 23:59:59' AND `ekstra`='hardware'");
+    while($tampil=mysqli_fetch_array($query)){
+      $nominal=$tampil['nominal'];
+      $DK=$tampil['DK'];
+
+      if($DK=='D'){
+        $nominal_debit = $nominal_debit + $nominal;
+      } else {
+        $nominal_kredit = $nominal_kredit + $nominal;
+      }
+    }
+
+    $total_nominal = $nominal_kredit - $nominal_debit;
+    return $total_nominal;
+  }
+
+  function select_jumlah_nominal_per_account_kredit_overhead($id_account, $tanggal_awal, $tanggal_akhir) {    
+    include "../../koneksi/koneksi.php";
+
+    $total_nominal = 0;
+    $query=mysqli_query($koneksi,"SELECT * FROM `data_transaksi` WHERE `id_account`='$id_account' AND tanggal BETWEEN '$tanggal_awal 00:00:00' AND '$tanggal_akhir 23:59:59' AND `ekstra`=''");
     while($tampil=mysqli_fetch_array($query)){
       $nominal=$tampil['nominal'];
       $DK=$tampil['DK'];
