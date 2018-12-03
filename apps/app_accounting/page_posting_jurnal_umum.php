@@ -65,7 +65,7 @@
               <div class="col-sm-10">
                 <select class="form-control" name="ekstra" required="required">
                   <option selected="selected" disabled="disabled"></option>
-                  <option value="">Umum</option>
+                  <option value="">Overhead</option>
                   <option value="access">Access</option>
                   <option value="hardware">Hardware</option>
                 </select>
