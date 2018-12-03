@@ -28,7 +28,7 @@ if(isset($_GET['tanggal_akhir'])){
   <h1 class="">
     <a href="#modal_periode" role="button"  data-target = "#modal_periode" data-toggle="modal" class="btn btn-primary">Periode</a>
     &nbsp;
-    <a href="pdf_laba_rugi.php?tanggal_awal=<?php echo $tanggal_awal;?>&tanggal_akhir=<?php echo $tanggal_akhir;?>" target="_blank" class="btn btn-primary">Download</a>
+    <a href="pdf_laba_rugi_hardware.php?tanggal_awal=<?php echo $tanggal_awal;?>&tanggal_akhir=<?php echo $tanggal_akhir;?>" target="_blank" class="btn btn-primary">Download</a>
   </h1>
 </section>
 <?php include "modal_opsi_laba_rugi.php";?>

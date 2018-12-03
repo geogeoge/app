@@ -38,11 +38,11 @@ $pdf->SetFont('Times','B',14);
 $pdf->Cell(10,15,' ',0, 1, 'C');
 
 $pdf->SetFont('Arial','B',14);
-$pdf->Cell(190,5,'CV. CONNECTIS JATI INFORMATIKA',0, 0, 'C');
+$pdf->Cell(190,5,'PT. SOLO JALA BUANA',0, 0, 'C');
 $pdf->Cell(0,6,'',0, 1, 'R');
 
 $pdf->SetFont('Times','B',12);
-$pdf->Cell(190,5,'Laporan Laba/Rugi',0, 0, 'C');
+$pdf->Cell(190,5,'Laporan Laba/Rugi Access',0, 0, 'C');
 
 $pdf->Ln();
 $pdf->SetFont('Times','B',10);
@@ -75,7 +75,7 @@ foreach($select->select_jenis_account_where_id_master_jenis_account('4') as $dat
 	foreach ($select->select_account_where_id_jenis_account($id_jenis_account) as $data_account) {
         $id_account = $data_account['id_account'];
         $nama_account = $data_account['nama_account'];
-        $nominal = $select->select_jumlah_nominal_per_account_kredit($id_account, $tanggal_awal, $tanggal_akhir);
+        $nominal = $select->select_jumlah_nominal_per_account_kredit_access($id_account, $tanggal_awal, $tanggal_akhir);
         $total_pendapatan = $total_pendapatan + $nominal;
 
         $pdf->SetFont('Times','',8);
@@ -103,7 +103,7 @@ foreach($select->select_jenis_account_where_id_master_jenis_account('5') as $dat
 	foreach ($select->select_account_where_id_jenis_account($id_jenis_account) as $data_account) {
         $id_account = $data_account['id_account'];
         $nama_account = $data_account['nama_account'];
-        $nominal = $select->select_jumlah_nominal_per_account_debit($id_account, $tanggal_awal, $tanggal_akhir);
+        $nominal = $select->select_jumlah_nominal_per_account_debit_access($id_account, $tanggal_awal, $tanggal_akhir);
         $total_biaya = $total_biaya + $nominal;
 
         $pdf->SetFont('Times','',8);

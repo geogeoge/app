@@ -29,7 +29,6 @@ $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetLineWidth(0);
 
-$pdf->Ln();
 $pdf->SetFont('Times','B',14);
 $pdf->Cell(10,15,' ',0, 1, 'C');
 
@@ -40,7 +39,6 @@ $pdf->Cell(0,6,'',0, 1, 'R');
 $pdf->SetFont('Times','B',12);
 $pdf->Cell(190,5,'Laporan Posisi Keuangan',0, 0, 'C');
 
-$pdf->Ln();
 $pdf->SetFont('Times','B',10);
 $pdf->Cell(190,5,'Sampai '.date('d', strtotime($tanggal_periode))." ".$bulan_indonesia[date('m', strtotime($tanggal_periode))]." ".date('Y', strtotime($tanggal_periode)),0, 0, 'C');
 
