@@ -24,13 +24,17 @@ if(isset($_GET['tanggal_periode'])){
   $tanggal_periode = $_GET['tanggal_periode'];
 }
 
+//untuk kebutuhan laba rugi
+$tanggal_awal_yang_ditahan = "0000-00-00";
+$tanggal_awal_bulan_berjalan = date('Y-m-', strtotime($tanggal_periode))."01";
+
+$tanggal_akhir_yang_ditahan = date('Y-m-d', strtotime('-1 days', strtotime($tanggal_awal_bulan_berjalan)));
+$tanggal_akhir_bulan_bejalan = $tanggal_periode;
+
 
 $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetLineWidth(0);
-
-$pdf->SetFont('Times','B',14);
-$pdf->Cell(10,15,' ',0, 1, 'C');
 
 $pdf->SetFont('Arial','B',14);
 $pdf->Cell(190,5,'PT. SOLO JALA BUANA',0, 0, 'C');
@@ -39,12 +43,9 @@ $pdf->Cell(0,6,'',0, 1, 'R');
 $pdf->SetFont('Times','B',12);
 $pdf->Cell(190,5,'Laporan Posisi Keuangan',0, 0, 'C');
 
+$pdf->Ln();
 $pdf->SetFont('Times','B',10);
 $pdf->Cell(190,5,'Sampai '.date('d', strtotime($tanggal_periode))." ".$bulan_indonesia[date('m', strtotime($tanggal_periode))]." ".date('Y', strtotime($tanggal_periode)),0, 0, 'C');
-
-$pdf->Ln();
-$pdf->SetFont('Times','B',8);
-$pdf->Cell(190,5,'(Disajikan dalam mata uang Rupiah)',0, 0, 'C');
 
 // ----------------------------------------- AKTIVA ----------------------------------------- \\
 $pdf->Cell(10,7,'',0,1);
@@ -162,7 +163,7 @@ foreach($select->select_jenis_account_where_id_master_jenis_account('3') as $dat
 		$id_jenis_account=$data_jenis_account['id_jenis_account'];
 		foreach ($select->select_account_where_id_jenis_account($id_jenis_account) as $data_account) {
 		  $id_account = $data_account['id_account'];
-		  $nominal = $select->select_jumlah_nominal_per_account_kredit($id_account, $tanggal_awal, $tanggal_periode);
+		  $nominal = $select->select_jumlah_nominal_per_account_kredit($id_account, $tanggal_awal_yang_ditahan, $tanggal_akhir_yang_ditahan);
 
 		  $total_pendapatan = $total_pendapatan + $nominal;
 		}
@@ -173,22 +174,53 @@ foreach($select->select_jenis_account_where_id_master_jenis_account('3') as $dat
       $id_jenis_account=$data_jenis_account['id_jenis_account'];
       foreach ($select->select_account_where_id_jenis_account($id_jenis_account) as $data_account) {
         $id_account = $data_account['id_account'];
-        $nominal = $select->select_jumlah_nominal_per_account_debit($id_account, $tanggal_awal, $tanggal_periode);
+        $nominal = $select->select_jumlah_nominal_per_account_debit($id_account, $tanggal_awal_yang_ditahan, $tanggal_akhir_yang_ditahan);
         $total_biaya = $total_biaya + $nominal;
       }
   	}
 
-  	$laba_rugi = $total_pendapatan-$total_biaya;
+  	$laba_rugi_yang_ditahan = $total_pendapatan-$total_biaya;
 
   	$pdf->SetFont('Times','',8);
 	$pdf->Cell(5,5,'',TB,0,'L',220, 220, 220);
-	$pdf->Cell(110,5,'Laba/Rugi',TB,0,'L',220, 220, 220);
-	$pdf->Cell(25,5,number_format($laba_rugi,0,',','.'),TB,0,'R',220, 220, 220);
+	$pdf->Cell(110,5,'Laba/Rugi Yang Ditahan',TB,0,'L',220, 220, 220);
+	$pdf->Cell(25,5,number_format($laba_rugi_yang_ditahan,0,',','.'),TB,0,'R',220, 220, 220);
+	$pdf->Cell(25,5,'',TB,0,'R',220, 220, 220);
+	$pdf->Cell(25,5,'',TB,1,'R',220, 220, 220);
+
+
+	$total_pendapatan = 0;
+	foreach ($select->select_jenis_account_where_id_master_jenis_account('4') as $data_jenis_account) {
+		$id_jenis_account=$data_jenis_account['id_jenis_account'];
+		foreach ($select->select_account_where_id_jenis_account($id_jenis_account) as $data_account) {
+		  $id_account = $data_account['id_account'];
+		  $nominal = $select->select_jumlah_nominal_per_account_kredit($id_account, $tanggal_awal_bulan_berjalan, $tanggal_akhir_bulan_bejalan);
+
+		  $total_pendapatan = $total_pendapatan + $nominal;
+		}
+	}
+
+	$total_biaya = 0;
+    foreach ($select->select_jenis_account_where_id_master_jenis_account('5') as $data_jenis_account) {
+      $id_jenis_account=$data_jenis_account['id_jenis_account'];
+      foreach ($select->select_account_where_id_jenis_account($id_jenis_account) as $data_account) {
+        $id_account = $data_account['id_account'];
+        $nominal = $select->select_jumlah_nominal_per_account_debit($id_account, $tanggal_awal_bulan_berjalan, $tanggal_akhir_bulan_bejalan);
+        $total_biaya = $total_biaya + $nominal;
+      }
+  	}
+
+  	$laba_rugi_bulan_berjalan = $total_pendapatan-$total_biaya;
+
+  	$pdf->SetFont('Times','',8);
+	$pdf->Cell(5,5,'',TB,0,'L',220, 220, 220);
+	$pdf->Cell(110,5,'Laba/Rugi Bulan Berjalan',TB,0,'L',220, 220, 220);
+	$pdf->Cell(25,5,number_format($laba_rugi_bulan_berjalan,0,',','.'),TB,0,'R',220, 220, 220);
 	$pdf->Cell(25,5,'',TB,0,'R',220, 220, 220);
 	$pdf->Cell(25,5,'',TB,1,'R',220, 220, 220);
 	// ------------------------ BATAS LABA/RUGI ------------------------ \\
 
-	$total_jenis_account = $total_jenis_account + $laba_rugi;
+	$total_jenis_account = $total_jenis_account + $laba_rugi_yang_ditahan + $laba_rugi_bulan_berjalan;
 
 	$pdf->SetFont('Times','B',8);
 	$pdf->Cell(115,5,'TOTAL '.$jenis_account,TB,0,'C',220, 220, 220);

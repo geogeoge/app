@@ -18,6 +18,13 @@ $tanggal_periode = date('Y-m-d');
 if(isset($_GET['tanggal_periode'])){
   $tanggal_periode = $_GET['tanggal_periode'];
 }
+
+//untuk kebutuhan laba rugi
+$tanggal_awal_yang_ditahan = "0000-00-00";
+$tanggal_awal_bulan_berjalan = date('Y-m-', strtotime($tanggal_periode))."01";
+
+$tanggal_akhir_yang_ditahan = date('Y-m-d', strtotime('-1 days', strtotime($tanggal_awal_bulan_berjalan)));
+$tanggal_akhir_bulan_bejalan = $tanggal_periode;
 ?>
 <section class="content-header">
   <h1 class="">
@@ -177,7 +184,7 @@ if(isset($_GET['tanggal_periode'])){
                     $id_jenis_account=$data_jenis_account['id_jenis_account'];
                     foreach ($select->select_account_where_id_jenis_account($id_jenis_account) as $data_account) {
                       $id_account = $data_account['id_account'];
-                      $nominal = $select->select_jumlah_nominal_per_account_kredit($id_account, $tanggal_awal, $tanggal_periode);
+                      $nominal = $select->select_jumlah_nominal_per_account_kredit($id_account, $tanggal_awal_yang_ditahan, $tanggal_akhir_yang_ditahan);
 
                       $total_pendapatan = $total_pendapatan + $nominal;
                     }
@@ -189,21 +196,55 @@ if(isset($_GET['tanggal_periode'])){
                     $id_jenis_account=$data_jenis_account['id_jenis_account'];
                     foreach ($select->select_account_where_id_jenis_account($id_jenis_account) as $data_account) {
                       $id_account = $data_account['id_account'];
-                      $nominal = $select->select_jumlah_nominal_per_account_debit($id_account, $tanggal_awal, $tanggal_periode);
+                      $nominal = $select->select_jumlah_nominal_per_account_debit($id_account, $tanggal_awal_yang_ditahan, $tanggal_akhir_yang_ditahan);
 
                       $total_biaya = $total_biaya + $nominal;
                     }
                   }
-                  $laba_rugi = $total_pendapatan-$total_biaya;
+                  $laba_rugi_yang_ditahan = $total_pendapatan-$total_biaya;
                   ?>
-                  <td width="200" align="right"><?php echo number_format($laba_rugi,0,',','.');?></td>
+                  <td width="200" align="right"><?php echo number_format($laba_rugi_yang_ditahan,0,',','.');?></td>
                   <td width="200" align="right">&nbsp;</td>
                   <td width="200" align="right">&nbsp;</td>
                 </tr>
+
+                <tr>
+                  <td width="50">&nbsp;</td>
+                  <td><?php echo "Laba/Rugi Bulan Berjalan";?></td>
+                  <?php
+                  $total_pendapatan = 0;
+                  foreach ($select->select_jenis_account_where_id_master_jenis_account('4') as $data_jenis_account) {
+                    $id_jenis_account=$data_jenis_account['id_jenis_account'];
+                    foreach ($select->select_account_where_id_jenis_account($id_jenis_account) as $data_account) {
+                      $id_account = $data_account['id_account'];
+                      $nominal = $select->select_jumlah_nominal_per_account_kredit($id_account, $tanggal_awal_bulan_berjalan, $tanggal_akhir_bulan_bejalan);
+
+                      $total_pendapatan = $total_pendapatan + $nominal;
+                    }
+
+                  }
+
+                  $total_biaya = 0;
+                  foreach ($select->select_jenis_account_where_id_master_jenis_account('5') as $data_jenis_account) {
+                    $id_jenis_account=$data_jenis_account['id_jenis_account'];
+                    foreach ($select->select_account_where_id_jenis_account($id_jenis_account) as $data_account) {
+                      $id_account = $data_account['id_account'];
+                      $nominal = $select->select_jumlah_nominal_per_account_debit($id_account, $tanggal_awal_bulan_berjalan, $tanggal_akhir_bulan_bejalan);
+
+                      $total_biaya = $total_biaya + $nominal;
+                    }
+                  }
+                  $laba_rugi_bulan_berjalan = $total_pendapatan-$total_biaya;
+                  ?>
+                  <td width="200" align="right"><?php echo number_format($laba_rugi_bulan_berjalan,0,',','.');?></td>
+                  <td width="200" align="right">&nbsp;</td>
+                  <td width="200" align="right">&nbsp;</td>
+                </tr>
+
               <tr>
                 <td colspan="2" align="center">Jumlah <?php echo $jenis_account;?></td>
                 <td width="200" align="right" style="border-top-width: 2px; border-top-color: black;">&nbsp;</td>
-                <td width="200" align="right"><?php echo number_format($total_jenis_account=$total_jenis_account+$laba_rugi,0,',','.');?></td>
+                <td width="200" align="right"><?php echo number_format($total_jenis_account=$total_jenis_account+$laba_rugi_yang_ditahan+$laba_rugi_bulan_berjalan,0,',','.');?></td>
                 <td width="200" align="right">&nbsp;</td>
               </tr>
               <?php

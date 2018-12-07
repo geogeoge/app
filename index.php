@@ -52,6 +52,14 @@ if($maintenance=="1"){
 	} else 
 	if($level=="NOC") {
 	  header('location:apps/app_noc');
+	}else 
+	if($level=="PENYUSUTAN") {
+
+		$curl = curl_init();
+		curl_setopt($curl, CURLOPT_URL,"http://localhost/project/Appsolonet/apps/ci_penyusutan/login/login_api");
+		curl_setopt($curl, CURLOPT_POST, 1);
+		curl_setopt($curl, CURLOPT_POSTFIELDS, "username=" .$_SESSION['username']. "&level=" .$level. "&id_user=" .$id_user);
+	  	header('location:apps/ci_penyusutan/');
 	}else {
 		header('location:login');
 	}
