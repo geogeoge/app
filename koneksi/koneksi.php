@@ -6,10 +6,10 @@ $pass = 'r4s4ht4k0kt4k0k';         // ini berlaku di xampp
 $db = 'appsolon_app';
 
 //Ini koneksi untuk maintenance
-$host = 'localhost'; 
-$user = 'root';     // ini berlaku di xampp
-$pass = 'root';         // ini berlaku di xampp
-$db = 'sampah_input_hw';
+// $host = 'localhost'; 
+// $user = 'root';     // ini berlaku di xampp
+// $pass = 'root';         // ini berlaku di xampp
+// $db = 'sampah_input_hw';
  
 // melakukan koneksi ke database
 $koneksi = new mysqli($host,$user,$pass,$db);
