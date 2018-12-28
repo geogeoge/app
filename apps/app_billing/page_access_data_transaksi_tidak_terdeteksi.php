@@ -9,10 +9,12 @@ if(empty($_GET['bank'])) {
     <a href="?page=page_access_data_transaksi_tidak_terdeteksi&bank=BCA" class="btn btn-info">BCA</a>&nbsp;<a href="?page=page_access_data_transaksi_tidak_terdeteksi&bank=BNI" class="btn btn-info">BNI</a>&nbsp;<a href="?page=page_access_data_transaksi_tidak_terdeteksi&bank=BRI" class="btn btn-info">BRI</a>&nbsp;<a href="?page=page_access_data_transaksi_tidak_terdeteksi&bank=MANDIRI" class="btn btn-info">MANDIRI</a>&nbsp;<a href="?page=page_access_data_transaksi_tidak_terdeteksi&bank=BPD" class="btn btn-info">BPD</a>
     <small>Bank</small>
     <div class="tombol_tambah">
+      <a href="#import" role="button"  data-target = "#import" data-toggle="modal" class="btn btn-primary">&nbsp;Import Axcel</a>
       <a href="#tambah_pembayaran" role="button"  data-target = "#tambah_pembayaran" data-toggle="modal" class="btn btn-primary">&nbsp;Tambah</a>
     </div>
   </h1>
 </section>
+<?php include "modal_access_import.php"; ?>
 <?php include "modal_access_tambah_pembayaran_tidak_terdeteksi.php"; ?>
 <!-- Main content -->
 <section class="content">
