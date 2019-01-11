@@ -9,7 +9,7 @@ $db = 'appsolon_app';
 // $host = 'localhost'; 
 // $user = 'root';     // ini berlaku di xampp
 // $pass = 'root';         // ini berlaku di xampp
-// $db = 'sampah_input_hw';
+// $db = 'appsolon_app';
  
 // melakukan koneksi ke database
 $koneksi = new mysqli($host,$user,$pass,$db);
@@ -20,5 +20,5 @@ if ($koneksi->connect_error) {
    die('Maaf koneksi gagal: '. $connect->connect_error);
 }
 
-error_reporting(0);
+//error_reporting(0);
 ?>
