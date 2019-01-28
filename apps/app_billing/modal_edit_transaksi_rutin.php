@@ -12,7 +12,7 @@
 						<textarea class="form-control" name="keterangan" rows="3"><?php echo $data['keterangan']; ?></textarea>
 					</div>
 				</div>
-				<div class="form-group" hidden="hidden">
+				<div class="form-group">
 					<div class="col-sx-10">
 						<input type="text" name="id_bantu_log_pembayaran_rutin" value="<?php echo $data['id_bantu_log_pembayaran_rutin'];?>"></input>
 					</div>

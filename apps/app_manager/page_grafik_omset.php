@@ -88,7 +88,7 @@ Highcharts.chart('container', {
     //     name: 'Target',
     //     data: [
     //             <?php
-    //               foreach($select->select_target_omset('2018') as $data) {
+    //               foreach($select->select_target_omset($tahun) as $data) {
     //                 $data_target = $data['nominal_target_omset'];
     //                 echo $data_target.",";
     //               }
@@ -99,7 +99,7 @@ Highcharts.chart('container', {
         name: 'Realisasi Omset',
         data: [
                 <?php
-                  foreach($select->select_realita_omset('2018') as $data) {
+                  foreach($select->select_realita_omset($tahun) as $data) {
                     $data_omset = $data;
                     echo $data_omset.",";
                   }

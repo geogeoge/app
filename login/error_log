@@ -3,3 +3,5 @@
 [16-Apr-2018 14:16:32 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/appsolonetnet/public_html/koneksi/koneksi.php on line 9
 [16-Apr-2018 14:16:40 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/appsolonetnet/public_html/koneksi/koneksi.php on line 9
 [16-Apr-2018 14:16:47 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/appsolonetnet/public_html/koneksi/koneksi.php on line 9
+[30-Nov-2018 14:50:54 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/appsolonetnet/public_html/koneksi/koneksi.php on line 15
+[22-Jan-2019 19:01:56 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/appsolonetnet/public_html/koneksi/koneksi.php on line 15

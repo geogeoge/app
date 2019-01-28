@@ -20,5 +20,5 @@ if ($koneksi->connect_error) {
    die('Maaf koneksi gagal: '. $connect->connect_error);
 }
 
-//error_reporting(0);
+error_reporting(0);
 ?>

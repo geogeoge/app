@@ -129,6 +129,8 @@ if(isset($_GET['limit'])){
                           <option value="2">Bank</option>
                           <option value="3">Piutang Dagang</option>
                           <option value="7">Piutang Karyawan</option>
+                          <option value="81">Piutang Internal</option>
+                          <option value="4">Biaya Dibayar Dimuka</option>
                           <option value="67">Titipan Hardware</option>
                           <option value="21">Hutang Dagang</option>
                           <option value="29">Hutang Bank</option>

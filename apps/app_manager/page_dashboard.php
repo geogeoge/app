@@ -1,3 +1,6 @@
+<?php
+$tahun = "2019";
+?>
 <div class="container">
   <!-- Content Header (Page header) -->
   <section class="content-header">
@@ -17,7 +20,7 @@
           <!-- small box -->
           <a href="?page=page_grafik_omset"  class="small-box bg-aqua">
             <div class="inner">
-              <h3><?php echo number_format($select->select_dashboard_omset('2018'),0,',','.');?></h3>
+              <h3><?php echo number_format($select->select_dashboard_omset($tahun),0,',','.');?></h3>
 
               <p><b>Omset</b> Bulan Berjalan</p>
             </div>
@@ -32,7 +35,7 @@
           <!-- small box -->
           <a href="?page=page_grafik_tagihan" class="small-box bg-green">
             <div class="inner">
-              <h3><?php echo number_format($select->select_dashboard_tagihan_terbayar('2018'),0,',','.');?></h3>
+              <h3><?php echo number_format($select->select_dashboard_tagihan_terbayar($tahun),0,',','.');?></h3>
 
               <p><b>Tagihan Terbayar</b> Bulan Berjalan</p>
             </div>
@@ -47,7 +50,7 @@
           <!-- small box -->
           <a href="?page=page_grafik_pemasangan" class="small-box bg-yellow">
             <div class="inner">
-              <h3><?php echo number_format($select->select_dashboard_pemasangan('2018'),0,',','.');?></h3>
+              <h3><?php echo number_format($select->select_dashboard_pemasangan($tahun),0,',','.');?></h3>
 
               <p><b>Pemasangan</b> Bulan Berjalan</p>
             </div>
@@ -128,27 +131,27 @@ Highcharts.chart('container', {
         colorByPoint: true,
         data: [{
             name: 'Paket Costume',
-            y: <?php echo $select->select_dashboard_pengguna_produk_kostume('2018');?>,
+            y: <?php echo $select->select_dashboard_pengguna_produk_kostume($tahun);?>,
             // sliced: true,
             // selected: true
         }, {
             name: 'Paket Khusus',
-            y: <?php echo $select->select_dashboard_pengguna_produk_khusus('2018');?>
+            y: <?php echo $select->select_dashboard_pengguna_produk_khusus($tahun);?>
         }, {
             name: 'Rp. 200.000',
-            y: <?php echo $select->select_dashboard_pengguna_produk_200000('2018');?>
+            y: <?php echo $select->select_dashboard_pengguna_produk_200000($tahun);?>
         }, {
             name: 'Rp. 350.000',
-            y: <?php echo $select->select_dashboard_pengguna_produk_350000('2018');?>
+            y: <?php echo $select->select_dashboard_pengguna_produk_350000($tahun);?>
         }, {
             name: 'Rp. 500.000',
-            y: <?php echo $select->select_dashboard_pengguna_produk_500000('2018');?>
+            y: <?php echo $select->select_dashboard_pengguna_produk_500000($tahun);?>
         }, {
             name: 'Rp. 750.000',
-            y: <?php echo $select->select_dashboard_pengguna_produk_750000('2018');?>
+            y: <?php echo $select->select_dashboard_pengguna_produk_750000($tahun);?>
         }, {
             name: 'Rp. 1.000.000',
-            y: <?php echo $select->select_dashboard_pengguna_produk_1000000('2018');?>
+            y: <?php echo $select->select_dashboard_pengguna_produk_1000000($tahun);?>
         }]
     }]
 });
@@ -185,27 +188,27 @@ Highcharts.chart('container_2', {
         colorByPoint: true,
         data: [{
             name: 'Paket Costume',
-            y: <?php echo $select->select_dashboard_produk_kostume('2018');?>,
+            y: <?php echo $select->select_dashboard_produk_kostume($tahun);?>,
             // sliced: true,
             // selected: true
         }, {
             name: 'Paket Khusus',
-            y: <?php echo $select->select_dashboard_produk_khusus('2018');?>
+            y: <?php echo $select->select_dashboard_produk_khusus($tahun);?>
         }, {
             name: 'Rp. 200.000',
-            y: <?php echo $select->select_dashboard_produk_200000('2018');?>
+            y: <?php echo $select->select_dashboard_produk_200000($tahun);?>
         }, {
             name: 'Rp. 350.000',
-            y: <?php echo $select->select_dashboard_produk_350000('2018');?>
+            y: <?php echo $select->select_dashboard_produk_350000($tahun);?>
         }, {
             name: 'Rp. 500.000',
-            y: <?php echo $select->select_dashboard_produk_500000('2018');?>
+            y: <?php echo $select->select_dashboard_produk_500000($tahun);?>
         }, {
             name: 'Rp. 750.000',
-            y: <?php echo $select->select_dashboard_produk_750000('2018');?>
+            y: <?php echo $select->select_dashboard_produk_750000($tahun);?>
         }, {
             name: 'Rp. 1.000.000',
-            y: <?php echo $select->select_dashboard_produk_1000000('2018');?>
+            y: <?php echo $select->select_dashboard_produk_1000000($tahun);?>
         }]
     }]
 });
