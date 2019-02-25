@@ -1,5 +1,8 @@
 <?php
-$tahun = "2018";
+$tahun = date('Y');
+if(isset($_GET['tahun'])){
+    $tahun = $_GET['tahun'];
+}
 ?>
 <section class="content-header">
   <h1 class="">
@@ -16,8 +19,9 @@ $tahun = "2018";
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header">
-          <h3 class="box-title">Tabel Tagihan User Baru</h3>
+          <h3 class="box-title">Tabel Data Rekap User</h3>
         </div>
+        <?php include "modal_ganti_tahun.php";?>
         <!-- /.box-header -->
         <div class="box-body scroll">
           <table id="" class="table table-bordered table-striped">
@@ -25,7 +29,9 @@ $tahun = "2018";
             <tr>
               <th width="10" rowspan="2">No</th>
               <th width="300" rowspan="2">Nama User</th>
-              <th colspan="12"><?php echo $tahun; ?></th>
+              <th colspan="12">
+                  <a href="#ganti_tahun" role="button"  data-target="#ganti_tahun" data-toggle="modal"><?php echo $tahun;?></a>
+              </th>
             </tr>
             <tr>
               <th width="100">Januari</th>

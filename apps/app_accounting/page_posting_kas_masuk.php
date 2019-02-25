@@ -134,6 +134,8 @@ if(isset($_GET['limit'])){
                           <option value="67">Titipan Hardware</option>
                           <option value="21">Hutang Dagang</option>
                           <option value="29">Hutang Bank</option>
+                          <option value="24">Hutang Internal</option>
+                          <option value="13">Inventaris</option>
                           <?php 
                           foreach ($select->select_account_posting('6') as $kredit) {
                             ?>

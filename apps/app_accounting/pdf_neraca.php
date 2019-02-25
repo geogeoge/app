@@ -37,22 +37,22 @@ $pdf->AddPage();
 $pdf->SetLineWidth(0);
 
 $pdf->SetFont('Arial','B',14);
-$pdf->Cell(190,5,'PT. SOLO JALA BUANA',0, 0, 'C');
+$pdf->Cell(190,4,'PT. SOLO JALA BUANA',0, 0, 'C');
 $pdf->Cell(0,6,'',0, 1, 'R');
 
 $pdf->SetFont('Times','B',12);
-$pdf->Cell(190,5,'Laporan Posisi Keuangan',0, 0, 'C');
+$pdf->Cell(190,4,'Laporan Posisi Keuangan',0, 0, 'C');
 
 $pdf->Ln();
 $pdf->SetFont('Times','B',10);
-$pdf->Cell(190,5,'Sampai '.date('d', strtotime($tanggal_periode))." ".$bulan_indonesia[date('m', strtotime($tanggal_periode))]." ".date('Y', strtotime($tanggal_periode)),0, 0, 'C');
+$pdf->Cell(190,4,'Sampai '.date('d', strtotime($tanggal_periode))." ".$bulan_indonesia[date('m', strtotime($tanggal_periode))]." ".date('Y', strtotime($tanggal_periode)),0, 0, 'C');
 
 // ----------------------------------------- AKTIVA ----------------------------------------- \\
 $pdf->Cell(10,7,'',0,1);
 $pdf->SetFont('Times','B',10);
 $pdf->SetFillColor(1,128,128);
 $pdf->SetTextColor(255,255,255);
-$pdf->Cell(190,5,'AKTIVA',1,1,'C',1,128,128);
+$pdf->Cell(190,4,'AKTIVA',1,1,'C',1,128,128);
 
 
 $pdf->SetFillColor(255, 255, 255);
@@ -65,7 +65,7 @@ foreach($select->select_jenis_account_where_id_master_jenis_account('1') as $dat
 	$total_jenis_account=0;
 
 	$pdf->SetFont('Times','B',8);
-	$pdf->Cell(190,5,$jenis_account,TB,1,'L',220, 220, 220);
+	$pdf->Cell(190,4,$jenis_account,TB,1,'L',220, 220, 220);
 
 	foreach ($select->select_account_where_id_jenis_account($id_jenis_account) as $data_account) {
 	    $id_account = $data_account['id_account'];
@@ -74,30 +74,30 @@ foreach($select->select_jenis_account_where_id_master_jenis_account('1') as $dat
 		$total_jenis_account = $total_jenis_account + $nominal;
 
 		$pdf->SetFont('Times','',8);
-		$pdf->Cell(5,5,'',TB,0,'L',220, 220, 220);
-		$pdf->Cell(110,5,$nama_account,TB,0,'L',220, 220, 220);
-		$pdf->Cell(25,5,number_format($nominal,0,',','.'),TB,0,'R',220, 220, 220);
-		$pdf->Cell(25,5,'',TB,0,'R',220, 220, 220);
-		$pdf->Cell(25,5,'',TB,1,'R',220, 220, 220);
+		$pdf->Cell(5,4,'',TB,0,'L',220, 220, 220);
+		$pdf->Cell(110,4,$nama_account,TB,0,'L',220, 220, 220);
+		$pdf->Cell(25,4,number_format($nominal,0,',','.'),TB,0,'R',220, 220, 220);
+		$pdf->Cell(25,4,'',TB,0,'R',220, 220, 220);
+		$pdf->Cell(25,4,'',TB,1,'R',220, 220, 220);
 	}
 
 	$pdf->SetFont('Times','B',8);
-	$pdf->Cell(115,5,'TOTAL '.$jenis_account,TB,0,'C',220, 220, 220);
-	$pdf->Cell(25,5,'',TB,0,'R',220, 220, 220);
-	$pdf->Cell(25,5,number_format($total_jenis_account,0,',','.'),TB,0,'R',220, 220, 220);
-	$pdf->Cell(25,5,'',TB,1,'R',220, 220, 220);
+	$pdf->Cell(115,4,'TOTAL '.$jenis_account,TB,0,'C',220, 220, 220);
+	$pdf->Cell(25,4,'',TB,0,'R',220, 220, 220);
+	$pdf->Cell(25,4,number_format($total_jenis_account,0,',','.'),TB,0,'R',220, 220, 220);
+	$pdf->Cell(25,4,'',TB,1,'R',220, 220, 220);
 
 	$total_aktiva = $total_aktiva + $total_jenis_account;
 }
 $pdf->SetFillColor(220, 220, 220);
-$pdf->Cell(165,5,'TOTAL AKTIVA',TB,0,'C',220, 220, 220);
-$pdf->Cell(25,5,number_format($total_aktiva,0,',','.'),TB,1,'R',220, 220, 220);
+$pdf->Cell(165,4,'TOTAL AKTIVA',TB,0,'C',220, 220, 220);
+$pdf->Cell(25,4,number_format($total_aktiva,0,',','.'),TB,1,'R',220, 220, 220);
 
 // ----------------------------------------- PASIVA ----------------------------------------- \\
 $pdf->SetFont('Times','B',10);
 $pdf->SetFillColor(1,128,128);
 $pdf->SetTextColor(255,255,255);
-$pdf->Cell(190,5,'PASIVA',1,1,'C',1,128,128);
+$pdf->Cell(190,4,'PASIVA',1,1,'C',1,128,128);
 
 
 $pdf->SetFillColor(255, 255, 255);
@@ -110,7 +110,7 @@ foreach($select->select_jenis_account_where_id_master_jenis_account('2') as $dat
 	$total_jenis_account=0;
 
 	$pdf->SetFont('Times','B',8);
-	$pdf->Cell(190,5,$jenis_account,TB,1,'L',220, 220, 220);
+	$pdf->Cell(190,4,$jenis_account,TB,1,'L',220, 220, 220);
 
 	foreach ($select->select_account_where_id_jenis_account($id_jenis_account) as $data_account) {
         $id_account = $data_account['id_account'];
@@ -119,18 +119,18 @@ foreach($select->select_jenis_account_where_id_master_jenis_account('2') as $dat
         $total_jenis_account = $total_jenis_account + $nominal;
 
         $pdf->SetFont('Times','',8);
-		$pdf->Cell(5,5,'',TB,0,'L',220, 220, 220);
-		$pdf->Cell(110,5,$nama_account,TB,0,'L',220, 220, 220);
-		$pdf->Cell(25,5,number_format($nominal,0,',','.'),TB,0,'R',220, 220, 220);
-		$pdf->Cell(25,5,'',TB,0,'R',220, 220, 220);
-		$pdf->Cell(25,5,'',TB,1,'R',220, 220, 220);
+		$pdf->Cell(5,4,'',TB,0,'L',220, 220, 220);
+		$pdf->Cell(110,4,$nama_account,TB,0,'L',220, 220, 220);
+		$pdf->Cell(25,4,number_format($nominal,0,',','.'),TB,0,'R',220, 220, 220);
+		$pdf->Cell(25,4,'',TB,0,'R',220, 220, 220);
+		$pdf->Cell(25,4,'',TB,1,'R',220, 220, 220);
 	}
 
 	$pdf->SetFont('Times','B',8);
-	$pdf->Cell(115,5,'TOTAL '.$jenis_account,TB,0,'C',220, 220, 220);
-	$pdf->Cell(25,5,'',TB,0,'R',220, 220, 220);
-	$pdf->Cell(25,5,number_format($total_jenis_account,0,',','.'),TB,0,'R',220, 220, 220);
-	$pdf->Cell(25,5,'',TB,1,'R',220, 220, 220);
+	$pdf->Cell(115,4,'TOTAL '.$jenis_account,TB,0,'C',220, 220, 220);
+	$pdf->Cell(25,4,'',TB,0,'R',220, 220, 220);
+	$pdf->Cell(25,4,number_format($total_jenis_account,0,',','.'),TB,0,'R',220, 220, 220);
+	$pdf->Cell(25,4,'',TB,1,'R',220, 220, 220);
 
   	$total_pasiva = $total_pasiva + $total_jenis_account;
 }
@@ -141,7 +141,7 @@ foreach($select->select_jenis_account_where_id_master_jenis_account('3') as $dat
 	$total_jenis_account=0;
 
 	$pdf->SetFont('Times','B',8);
-	$pdf->Cell(190,5,$jenis_account,TB,1,'L',220, 220, 220);
+	$pdf->Cell(190,4,$jenis_account,TB,1,'L',220, 220, 220);
 
 	foreach ($select->select_account_where_id_jenis_account($id_jenis_account) as $data_account) {
         $id_account = $data_account['id_account'];
@@ -150,11 +150,11 @@ foreach($select->select_jenis_account_where_id_master_jenis_account('3') as $dat
         $total_jenis_account = $total_jenis_account + $nominal;
 
         $pdf->SetFont('Times','',8);
-		$pdf->Cell(5,5,'',TB,0,'L',220, 220, 220);
-		$pdf->Cell(110,5,$nama_account,TB,0,'L',220, 220, 220);
-		$pdf->Cell(25,5,number_format($nominal,0,',','.'),TB,0,'R',220, 220, 220);
-		$pdf->Cell(25,5,'',TB,0,'R',220, 220, 220);
-		$pdf->Cell(25,5,'',TB,1,'R',220, 220, 220);
+		$pdf->Cell(5,4,'',TB,0,'L',220, 220, 220);
+		$pdf->Cell(110,4,$nama_account,TB,0,'L',220, 220, 220);
+		$pdf->Cell(25,4,number_format($nominal,0,',','.'),TB,0,'R',220, 220, 220);
+		$pdf->Cell(25,4,'',TB,0,'R',220, 220, 220);
+		$pdf->Cell(25,4,'',TB,1,'R',220, 220, 220);
 	}
 
 	// ------------------------ MENCARI LABA/RUGI ------------------------ \\
@@ -182,11 +182,11 @@ foreach($select->select_jenis_account_where_id_master_jenis_account('3') as $dat
   	$laba_rugi_yang_ditahan = $total_pendapatan-$total_biaya;
 
   	$pdf->SetFont('Times','',8);
-	$pdf->Cell(5,5,'',TB,0,'L',220, 220, 220);
-	$pdf->Cell(110,5,'Laba/Rugi Yang Ditahan',TB,0,'L',220, 220, 220);
-	$pdf->Cell(25,5,number_format($laba_rugi_yang_ditahan,0,',','.'),TB,0,'R',220, 220, 220);
-	$pdf->Cell(25,5,'',TB,0,'R',220, 220, 220);
-	$pdf->Cell(25,5,'',TB,1,'R',220, 220, 220);
+	$pdf->Cell(5,4,'',TB,0,'L',220, 220, 220);
+	$pdf->Cell(110,4,'Laba/Rugi Yang Ditahan',TB,0,'L',220, 220, 220);
+	$pdf->Cell(25,4,number_format($laba_rugi_yang_ditahan,0,',','.'),TB,0,'R',220, 220, 220);
+	$pdf->Cell(25,4,'',TB,0,'R',220, 220, 220);
+	$pdf->Cell(25,4,'',TB,1,'R',220, 220, 220);
 
 
 	$total_pendapatan = 0;
@@ -213,27 +213,27 @@ foreach($select->select_jenis_account_where_id_master_jenis_account('3') as $dat
   	$laba_rugi_bulan_berjalan = $total_pendapatan-$total_biaya;
 
   	$pdf->SetFont('Times','',8);
-	$pdf->Cell(5,5,'',TB,0,'L',220, 220, 220);
-	$pdf->Cell(110,5,'Laba/Rugi Bulan Berjalan',TB,0,'L',220, 220, 220);
-	$pdf->Cell(25,5,number_format($laba_rugi_bulan_berjalan,0,',','.'),TB,0,'R',220, 220, 220);
-	$pdf->Cell(25,5,'',TB,0,'R',220, 220, 220);
-	$pdf->Cell(25,5,'',TB,1,'R',220, 220, 220);
+	$pdf->Cell(5,4,'',TB,0,'L',220, 220, 220);
+	$pdf->Cell(110,4,'Laba/Rugi Bulan Berjalan',TB,0,'L',220, 220, 220);
+	$pdf->Cell(25,4,number_format($laba_rugi_bulan_berjalan,0,',','.'),TB,0,'R',220, 220, 220);
+	$pdf->Cell(25,4,'',TB,0,'R',220, 220, 220);
+	$pdf->Cell(25,4,'',TB,1,'R',220, 220, 220);
 	// ------------------------ BATAS LABA/RUGI ------------------------ \\
 
 	$total_jenis_account = $total_jenis_account + $laba_rugi_yang_ditahan + $laba_rugi_bulan_berjalan;
 
 	$pdf->SetFont('Times','B',8);
-	$pdf->Cell(115,5,'TOTAL '.$jenis_account,TB,0,'C',220, 220, 220);
-	$pdf->Cell(25,5,'',TB,0,'R',220, 220, 220);
-	$pdf->Cell(25,5,number_format($total_jenis_account,0,',','.'),TB,0,'R',220, 220, 220);
-	$pdf->Cell(25,5,'',TB,1,'R',220, 220, 220);
+	$pdf->Cell(115,4,'TOTAL '.$jenis_account,TB,0,'C',220, 220, 220);
+	$pdf->Cell(25,4,'',TB,0,'R',220, 220, 220);
+	$pdf->Cell(25,4,number_format($total_jenis_account,0,',','.'),TB,0,'R',220, 220, 220);
+	$pdf->Cell(25,4,'',TB,1,'R',220, 220, 220);
 
   	$total_pasiva = $total_pasiva + $total_jenis_account;
 }
 
 $pdf->SetFillColor(220, 220, 220);
-$pdf->Cell(165,5,'TOTAL PASIVA',TB,0,'C',220, 220, 220);
-$pdf->Cell(25,5,number_format($total_pasiva,0,',','.'),TB,1,'R',220, 220, 220);
+$pdf->Cell(165,4,'TOTAL PASIVA',TB,0,'C',220, 220, 220);
+$pdf->Cell(25,4,number_format($total_pasiva,0,',','.'),TB,1,'R',220, 220, 220);
 
 
 

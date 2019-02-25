@@ -314,7 +314,7 @@ $query_tagihan_khusus = mysqli_query($koneksi,"select nama_user, (billing_bulan_
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index.html" class="logo">
+    <a href="#modal_pindah_app" role="button"  data-target = "#modal_pindah_app" data-toggle="modal" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><font size="6"><strong>S</strong></font></span>
       <!-- logo for regular state and mobile devices -->
@@ -341,6 +341,7 @@ $query_tagihan_khusus = mysqli_query($koneksi,"select nama_user, (billing_bulan_
       </div>
     </nav>
   </header>
+  <?php include "modal_pindah_app.php";?>
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->

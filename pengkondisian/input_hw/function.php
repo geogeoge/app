@@ -21,16 +21,16 @@ class pengkondisian {
 			$bulan_sementara = $pecah_tanggal_sementara[1];
 			switch ($bulan_sementara) {
 				
-				case 'nov':
-					$bulan_angka = "11";
+				case 'Jan':
+					$bulan_angka = "1";
 					break;
 
-				case 'Nov':
-					$bulan_angka = "11";
+				case 'jan':
+					$bulan_angka = "1";
 					break;
 
-				case 'Dec':
-					$bulan_angka = "12";
+				case 'JAN':
+					$bulan_angka = "1";
 					break;
 
 				default:
@@ -39,7 +39,7 @@ class pengkondisian {
 					break;
 			}
 
-			echo $tanggal = "2018-".$bulan_angka."-".$pecah_tanggal_sementara['0'];
+			echo $tanggal = "2019-".$bulan_angka."-".$pecah_tanggal_sementara['0'];
 
 			mysqli_query($koneksi,"UPDATE `sampah_hw` SET `tanggal`='$tanggal' WHERE `id_sampah`='$id_sampah'");
 		}

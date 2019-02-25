@@ -57,7 +57,7 @@ header("Content-Disposition: attachment; filename=tutorialweb-export.xls");
       $bulan = $tahun."-".$i;
       $query_log = mysqli_query($koneksi,"select * from billing_backup_log_user left join sale_paket_internet on billing_backup_log_user.id_paket=sale_paket_internet.id_paket where billing_backup_log_user.id_register='$id_register' and billing_backup_log_user.bulan like '%$bulan%'");
       $data_log = mysqli_fetch_array($query_log);
-      echo "<td align='right'>".number_format($data_log['harga'],0,',','.')."</td>";
+      echo "<td align='right'>".$data_log['harga']."</td>";
     }
     $no++;
     echo "</tr>";
